@@ -1,0 +1,283 @@
+Transcript Start Time:  21:46:45, 23 Dec 2024 Paris, Madrid 
+Current Directory: "C:\Users\quent"
+
+Build Time: May 13 2024 11:28:30 EST 
+Executable Path: C:/PROGRA~1/ANSYSI~1/ANSYSS~1/v242/fluent/ntbin/win64/fluent.exe
+
+-----------------------------------------------------------------------------------
+ID    Hostname  Core  O.S.         PID    Vendor                                  
+-----------------------------------------------------------------------------------
+n3    Quentin   4/16  Windows-x64  27920  12th Gen Intel(R) Core(TM) i5-12500H    
+n2    Quentin   3/16  Windows-x64  16988  12th Gen Intel(R) Core(TM) i5-12500H    
+n1    Quentin   2/16  Windows-x64  10108  12th Gen Intel(R) Core(TM) i5-12500H    
+n0*   Quentin   1/16  Windows-x64  26388  12th Gen Intel(R) Core(TM) i5-12500H    
+host  Quentin         Windows-x64  12916  12th Gen Intel(R) Core(TM) i5-12500H    
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-----------------------------------------------------------------------------------
+
+Cortex Process ID: 31528 
+License Server Path: () 
+Note: Rank = 0: Process affinity not being set (6).
+Note: Rank = 1: Process affinity not being set (6).
+Note: Rank = 2: Process affinity not being set (6).
+Note: Rank = 3: Process affinity not being set (6).
+Reading setting file in cache: "C:\temp\NACA0015_Airfoil\NACA0015_Airfoil_files\dp6\FFF\Fluent\FFF.1.set"
+Reading "C:\temp\NACA0015_Airfoil\NACA0015_Airfoil_files\dp6\FFF\MECH\FFF.1.msh"...
+Buffering for file scan...
+
+   49083 nodes, binary.
+    2085 nodes, binary.
+  149334 2D interior faces, zone  1, binary.
+      66 2D velocity-inlet faces, zone  5, binary.
+      42 2D pressure-outlet faces, zone  6, binary.
+      42 2D wall faces, zone  7, binary.
+    1935 2D wall faces, zone  8, binary.
+  100251 triangular cells, zone  2, binary.
+
+
+
+Following contexts active in the case file have been de-activated because of their current context control conditions:
+"coupled-pseudo-transient"
+
+Building...
+     mesh
+	auto partitioning mesh by Metis (fast),
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 25021/258 = 96.9806
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	airfoil
+	walls
+	outlet
+	inlet
+	surface_body
+	interior-surface_bodySetting surface_body (mixture) ... Done.
+ Setting zone id of surface_body to 2.
+ Setting zone id of interior-surface_body to 1.
+ Setting zone id of inlet to 5.
+ Setting zone id of outlet to 6.
+ Setting zone id of walls to 7.
+ Setting zone id of airfoil to 8.
+Done.
+Setting surface_body (mixture) ... Done.
+Setting interior-surface_body (mixture) ... Done.
+Setting inlet (mixture) ... Done.
+Setting outlet (mixture) ... Done.
+Setting walls (mixture) ... Done.
+Setting airfoil (mixture) ... Done.
+
+     parallel,
+Done.
+
+Preparing mesh for display...
+Done.
+
+Setting Post Processing and Surfaces information ...	 Done.
+WB->Fluent:Parameter name:Inlet_Velocity, value:4.68
+"Updating Setup cell..."
+WB->Fluent:Parameter name:Inlet_Velocity, value:4.68
+"Updating Solution cell..."
+Reading C:\\temp\\NACA0015_Airfoil\\NACA0015_Airfoil_files\\dp6\\FFF\\Fluent\\FFF.ip...
+Reading IP data ...
+	x-coord
+	y-coord
+	pressure
+	x-velocity
+	y-velocity
+	k
+	epsilon
+  Done.
+  Initializing values...
+  Done.
+WB->Fluent:Parameter name:Inlet_Velocity, value:4.68
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v242\fluent\fluent24.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+Writing to Quentin:"C:\temp\NACA0015_Airfoil\NACA0015_Airfoil_files\dp6\FFF\Fluent\FFF.1-Setup-Output.cas.h5" in NODE0 mode and compression level 1 ...
+Grouping cells for Laplace smoothing ...
+      100251 cells,     1 zone  ...
+      151419 faces,     5 zones ...
+       51168 nodes,     1 zone  ...
+  Done.
+Done.
+Overwriting "C:\temp\NACA0015_Airfoil\NACA0015_Airfoil_files\dp6\FFF\Fluent\.\\lift_coefficient-rfile.out"  of Report File "lift_coefficient-rfile"
+
+  iter  continuity  x-velocity  y-velocity           k     epsilon  lift_coeff     time/iter
+
+ turbulent viscosity limited to viscosity ratio of 1.000000e+05 in 49431 cells 
+     1  1.0000e+00  1.0919e-04  5.7761e-05  1.0921e+00  2.0550e+08  4.7522e-01  0:00:00   99
+        Negative k in 1083 cells after linear solve.
+        Negative epsilon in 407 cells after linear solve.
+
+ turbulent viscosity limited to viscosity ratio of 1.000000e+05 in 4299 cells 
+     2  6.6006e-01  3.2133e-04  1.7835e-04  2.5600e-04  5.9047e-01  4.3707e-01  0:00:00   98
+        Negative k in 6 cells after linear solve.
+        Negative epsilon in 25 cells after linear solve.
+
+ turbulent viscosity limited to viscosity ratio of 1.000000e+05 in 1678 cells 
+     3  1.0000e+00  5.3510e-04  2.2215e-04  7.0226e-01  8.9467e-01  3.3624e-01  0:01:37   97
+
+ turbulent viscosity limited to viscosity ratio of 1.000000e+05 in 893 cells 
+     4  1.0000e+00  2.6251e-04  1.3038e-04  7.5560e-01  9.5725e-01  4.9730e-01  0:01:17   96
+
+ turbulent viscosity limited to viscosity ratio of 1.000000e+05 in 36 cells 
+     5  7.8562e-01  1.4440e-04  8.5284e-05  7.8398e-01  9.6828e-01  5.6014e-01  0:01:20   95
+     6  6.0555e-01  9.1271e-05  6.2584e-05  7.8559e-01  9.4657e-01  5.5267e-01  0:01:03   94
+     7  4.5221e-01  6.6869e-05  4.4926e-05  8.0494e-01  8.5537e-01  5.3859e-01  0:00:50   93
+     8  3.3935e-01  5.3862e-05  2.9036e-05  6.6616e-01  5.9701e-01  5.4991e-01  0:00:40   92
+     9  2.6550e-01  4.7458e-05  1.9919e-05  3.4288e-01  2.5724e-01  5.6732e-01  0:00:50   91
+    10  2.0514e-01  4.1399e-05  1.4102e-05  1.1482e-01  1.0923e-01  5.7175e-01  0:00:39   90
+    11  1.5814e-01  3.5264e-05  1.0212e-05  4.6191e-02  7.4199e-02  5.6725e-01  0:00:31   89
+
+  iter  continuity  x-velocity  y-velocity           k     epsilon  lift_coeff     time/iter
+    12  1.2512e-01  3.0691e-05  7.5574e-06  2.3725e-02  6.4436e-02  5.6260e-01  0:00:25   88
+    13  9.7027e-02  2.6870e-05  6.1151e-06  1.2425e-02  5.8944e-02  5.5774e-01  0:00:19   87
+    14  7.5101e-02  2.3156e-05  4.9898e-06  6.3441e-03  5.4335e-02  5.4792e-01  0:00:15   86
+    15  5.8938e-02  2.0631e-05  4.4233e-06  3.7672e-03  4.9774e-02  5.3563e-01  0:00:29   85
+    16  4.5843e-02  1.8437e-05  3.9729e-06  2.7397e-03  4.5076e-02  5.2507e-01  0:00:23   84
+    17  3.6741e-02  1.6578e-05  3.4799e-06  3.0554e-03  4.0182e-02  5.2323e-01  0:00:18   83
+    18  2.9410e-02  1.4676e-05  2.7812e-06  3.6257e-03  3.5508e-02  5.4113e-01  0:00:14   82
+    19  2.4319e-02  1.3352e-05  2.6132e-06  3.0670e-03  3.1416e-02  5.7152e-01  0:00:11   81
+    20  2.2670e-02  1.3161e-05  3.3935e-06  2.9584e-03  2.6903e-02  5.9259e-01  0:00:25   80
+    21  2.0885e-02  1.2592e-05  3.3243e-06  2.8065e-03  2.3143e-02  6.0105e-01  0:00:20   79
+    22  1.7170e-02  1.1245e-05  2.7673e-06  2.2354e-03  1.9942e-02  6.0500e-01  0:00:16   78
+
+  iter  continuity  x-velocity  y-velocity           k     epsilon  lift_coeff     time/iter
+    23  1.4371e-02  9.3789e-06  2.0251e-06  1.3641e-03  1.7930e-02  6.0420e-01  0:00:12   77
+    24  1.1945e-02  7.7578e-06  1.4517e-06  1.6907e-03  1.5075e-02  6.0073e-01  0:00:10   76
+    25  9.9353e-03  6.4212e-06  1.0711e-06  1.1539e-03  1.3756e-02  5.9803e-01  0:00:08   75
+    26  8.3772e-03  5.3815e-06  8.8264e-07  5.3855e-04  1.3044e-02  5.9677e-01  0:00:21   74
+    27  7.1612e-03  4.6188e-06  7.4153e-07  3.3238e-04  1.0291e-02  5.9640e-01  0:00:16   73
+    28  6.1239e-03  3.9813e-06  6.0972e-07  3.2547e-04  8.2868e-03  5.9621e-01  0:00:13   72
+    29  5.3629e-03  3.5100e-06  5.1396e-07  2.6786e-04  7.2311e-03  5.9583e-01  0:00:10   71
+    30  4.5838e-03  3.0645e-06  4.3808e-07  1.6324e-04  6.8641e-03  5.9543e-01  0:00:08   70
+    31  4.1333e-03  2.7314e-06  3.8037e-07  1.3406e-04  5.0971e-03  5.9538e-01  0:00:06   69
+    32  3.6538e-03  2.4411e-06  3.2549e-07  1.1518e-04  3.9220e-03  5.9567e-01  0:00:19   68
+    33  3.1869e-03  2.1384e-06  2.7657e-07  8.7647e-05  2.7122e-03  5.9607e-01  0:00:15   67
+
+  iter  continuity  x-velocity  y-velocity           k     epsilon  lift_coeff     time/iter
+    34  2.8080e-03  1.8939e-06  2.5048e-07  6.0244e-05  1.9015e-03  5.9639e-01  0:00:12   66
+    35  2.5979e-03  1.6895e-06  2.2591e-07  4.7746e-05  1.3620e-03  5.9658e-01  0:00:09   65
+    36  2.2424e-03  1.5050e-06  2.0030e-07  4.1512e-05  9.9685e-04  5.9668e-01  0:00:07   64
+    37  1.9876e-03  1.3347e-06  1.7683e-07  3.3161e-05  7.2304e-04  5.9672e-01  0:00:06   63
+    38  1.7456e-03  1.1881e-06  1.5508e-07  2.7549e-05  7.1376e-04  5.9671e-01  0:00:17   62
+    39  1.6434e-03  1.0848e-06  1.3910e-07  2.5312e-05  4.0609e-04  5.9668e-01  0:00:13   61
+    40  1.4450e-03  9.7792e-07  1.2288e-07  2.1715e-05  3.1578e-04  5.9663e-01  0:00:10   60
+    41  1.3544e-03  8.8758e-07  1.1030e-07  1.9363e-05  2.3564e-04  5.9657e-01  0:00:08   59
+    42  1.2960e-03  8.0651e-07  1.0096e-07  1.7211e-05  2.1350e-04  5.9650e-01  0:00:06   58
+    43  1.2228e-03  7.4077e-07  9.1951e-08  1.8094e-05  2.2435e-04  5.9644e-01  0:00:16   57
+    44  1.2060e-03  7.1088e-07  8.5943e-08  1.8895e-05  1.8667e-04  5.9638e-01  0:00:13   56
+
+  iter  continuity  x-velocity  y-velocity           k     epsilon  lift_coeff     time/iter
+    45  1.1113e-03  6.4854e-07  8.0698e-08  1.7268e-05  1.9074e-04  5.9631e-01  0:00:10   55
+    46  9.4528e-04  5.8610e-07  7.2609e-08  1.4085e-05  1.2680e-04  5.9624e-01  0:00:08   54
+    47  9.4798e-04  5.5442e-07  6.6019e-08  1.3751e-05  1.1163e-04  5.9618e-01  0:00:06   53
+    48  8.0842e-04  5.0565e-07  6.1889e-08  1.2679e-05  9.3966e-05  5.9612e-01  0:00:15   52
+    49  8.5739e-04  4.6674e-07  5.8271e-08  1.2153e-05  7.4575e-05  5.9607e-01  0:00:12   51
+    50  7.8699e-04  4.2995e-07  5.2497e-08  1.1401e-05  8.4085e-05  5.9603e-01  0:00:09   50
+    51  6.9703e-04  3.8718e-07  4.9036e-08  1.0491e-05  7.8083e-05  5.9599e-01  0:00:07   49
+    52  7.1585e-04  3.6867e-07  4.4479e-08  9.4141e-06  5.0234e-05  5.9595e-01  0:00:06   48
+    53  5.6523e-04  3.2785e-07  3.9029e-08  9.0231e-06  6.0249e-05  5.9593e-01  0:00:05   47
+    54  4.7292e-04  2.9255e-07  3.5528e-08  8.6431e-06  4.4888e-05  5.9590e-01  0:00:13   46
+    55  6.3142e-04  2.8655e-07  3.4794e-08  1.0874e-05  8.6497e-05  5.9587e-01  0:00:10   45
+
+  iter  continuity  x-velocity  y-velocity           k     epsilon  lift_coeff     time/iter
+    56  5.8942e-04  2.9004e-07  3.3643e-08  1.1676e-05  7.4884e-05  5.9584e-01  0:00:08   44
+    57  6.0050e-04  2.6298e-07  3.4537e-08  1.1144e-05  9.1512e-05  5.9582e-01  0:00:06   43
+    58  5.7475e-04  2.4908e-07  3.2154e-08  7.8240e-06  5.5083e-05  5.9580e-01  0:00:05   42
+    59  5.2009e-04  2.2674e-07  2.6657e-08  7.5278e-06  4.6047e-05  5.9579e-01  0:00:04   41
+    60  4.7922e-04  2.1415e-07  2.5157e-08  8.3590e-06  4.7969e-05  5.9579e-01  0:00:11   40
+    61  4.6795e-04  1.9325e-07  2.4372e-08  7.7279e-06  4.6720e-05  5.9578e-01  0:00:09   39
+    62  3.8764e-04  1.6654e-07  2.2283e-08  8.0243e-06  4.6709e-05  5.9578e-01  0:00:07   38
+    63  4.6508e-04  1.7806e-07  2.3050e-08  8.8009e-06  6.0923e-05  5.9578e-01  0:00:05   37
+    64  4.1839e-04  1.6223e-07  2.1139e-08  7.9407e-06  6.5639e-05  5.9578e-01  0:00:04   36
+    65  4.3125e-04  1.5185e-07  2.0341e-08  6.2825e-06  3.3639e-05  5.9578e-01  0:00:10   35
+    66  3.6378e-04  1.4193e-07  1.7475e-08  5.2573e-06  2.9909e-05  5.9578e-01  0:00:08   34
+
+  iter  continuity  x-velocity  y-velocity           k     epsilon  lift_coeff     time/iter
+    67  3.6920e-04  1.3471e-07  1.6264e-08  8.5040e-06  8.8446e-05  5.9578e-01  0:00:06   33
+    68  4.9574e-04  1.7619e-07  1.7914e-08  1.0892e-05  6.7050e-05  5.9579e-01  0:00:05   32
+    69  5.0012e-04  1.5202e-07  1.9524e-08  1.0139e-05  9.6952e-05  5.9579e-01  0:00:04   31
+    70  3.6039e-04  1.2344e-07  1.7672e-08  7.9309e-06  5.6051e-05  5.9579e-01  0:00:03   30
+    71  4.2586e-04  1.2425e-07  1.5988e-08  7.0910e-06  5.0095e-05  5.9579e-01  0:00:08   29
+    72  3.3446e-04  1.1278e-07  1.5357e-08  6.3393e-06  4.8895e-05  5.9579e-01  0:00:06   28
+    73  3.3909e-04  1.0972e-07  1.4802e-08  6.4577e-06  4.5383e-05  5.9579e-01  0:00:05   27
+    74  2.9969e-04  1.0345e-07  1.3670e-08  6.3171e-06  4.7686e-05  5.9580e-01  0:00:04   26
+    75  3.5413e-04  9.6414e-08  1.4257e-08  6.6161e-06  5.7442e-05  5.9580e-01  0:00:03   25
+    76  3.4354e-04  9.2511e-08  1.2855e-08  5.4573e-06  3.3524e-05  5.9580e-01  0:00:07   24
+    77  2.2536e-04  7.3699e-08  1.1059e-08  4.9393e-06  3.4915e-05  5.9580e-01  0:00:05   23
+
+  iter  continuity  x-velocity  y-velocity           k     epsilon  lift_coeff     time/iter
+    78  2.0452e-04  6.7280e-08  1.0583e-08  5.0934e-06  2.3221e-05  5.9580e-01  0:00:04   22
+    79  3.1153e-04  8.2361e-08  1.0937e-08  7.5378e-06  7.1788e-05  5.9580e-01  0:00:03   21
+    80  3.3924e-04  1.0924e-07  1.1673e-08  9.5621e-06  7.4946e-05  5.9579e-01  0:00:02   20
+    81  3.9896e-04  1.0531e-07  1.5236e-08  9.6693e-06  9.0551e-05  5.9579e-01  0:00:06   19
+    82  4.3275e-04  1.0049e-07  1.4861e-08  6.7500e-06  5.2761e-05  5.9579e-01  0:00:04   18
+    83  4.0173e-04  9.8918e-08  1.2185e-08  6.9947e-06  4.5612e-05  5.9580e-01  0:00:03   17
+    84  3.8667e-04  1.0490e-07  1.3761e-08  7.9280e-06  4.9172e-05  5.9580e-01  0:00:02   16
+    85  3.2539e-04  8.6376e-08  1.2714e-08  6.2718e-06  4.9526e-05  5.9580e-01  0:00:02   15
+    86  2.1896e-04  6.8108e-08  1.0520e-08  6.2143e-06  4.5100e-05  5.9580e-01  0:00:04   14
+    87  2.8211e-04  8.0947e-08  1.2108e-08  6.5212e-06  4.9781e-05  5.9580e-01  0:00:03   13
+    88  2.8298e-04  6.6638e-08  1.0396e-08  5.4487e-06  4.1038e-05  5.9580e-01  0:00:02   12
+
+  iter  continuity  x-velocity  y-velocity           k     epsilon  lift_coeff     time/iter
+    89  2.3836e-04  6.2482e-08  1.0441e-08  4.5291e-06  2.5047e-05  5.9580e-01  0:00:02   11
+    90  2.1590e-04  5.8388e-08  8.7775e-09  3.7020e-06  2.3765e-05  5.9580e-01  0:00:01   10
+    91  2.7460e-04  6.6458e-08  9.9266e-09  6.6420e-06  7.5679e-05  5.9580e-01  0:00:03    9
+    92  4.0160e-04  1.1034e-07  1.0829e-08  9.0008e-06  6.1716e-05  5.9580e-01  0:00:02    8
+    93  3.2076e-04  8.7030e-08  1.2959e-08  9.1354e-06  9.2564e-05  5.9580e-01  0:00:01    7
+    94  3.2740e-04  7.2536e-08  1.2578e-08  7.1501e-06  4.9592e-05  5.9580e-01  0:00:01    6
+    95  3.5276e-04  7.7020e-08  1.1332e-08  6.6656e-06  5.0398e-05  5.9580e-01  0:00:01    5
+    96  2.2652e-04  6.2615e-08  1.0765e-08  5.6888e-06  4.9252e-05  5.9580e-01  0:00:01    4
+    97  2.8741e-04  7.0869e-08  1.1517e-08  5.7590e-06  4.0713e-05  5.9579e-01  0:00:01    3
+    98  2.6035e-04  6.8747e-08  9.9119e-09  5.7312e-06  4.8170e-05  5.9579e-01  0:00:00    2
+    99  2.5721e-04  6.6949e-08  1.0213e-08  6.6175e-06  6.5432e-05  5.9579e-01  0:00:00    1
+
+  iter  continuity  x-velocity  y-velocity           k     epsilon  lift_coeff     time/iter
+   100  3.0463e-04  7.4711e-08  9.5933e-09  6.1904e-06  3.5370e-05  5.9580e-01  0:00:00    0
+Registering ReportDefFiles, ("C:\temp\NACA0015_Airfoil\NACA0015_Airfoil_files\dp6\FFF\Fluent\.\\lift_coefficient-rfile.out")
+Writing "| gzip -2cf > SolutionMonitor.gz"...
+Writing temporary file C:\\Users\\quent\\AppData\\Local\\Temp\\flntgz-129162 ...
+Done.
+
+Writing data to C:\\temp\\NACA0015_Airfoil\\NACA0015_Airfoil_files\\dp6\\FFF\\Fluent\\FFF.1.ip ...
+	x-coord
+	y-coord
+	pressure
+	x-velocity
+	y-velocity
+	k
+	epsilon
+Done.
+
+Performance Timer for 100 iterations on 4 compute nodes
+  Average wall-clock time per iteration:                0.158 sec
+  Global reductions per iteration:                        131 ops
+  Global reductions time per iteration:                 0.000 sec (0.0%)
+  Message count per iteration:                          19206 messages
+  Data transfer per iteration:                          3.260 MB
+  LE solves per iteration:                                  3 solves
+  LE wall-clock time per iteration:                     0.126 sec (79.8%)
+  LE global solves per iteration:                          11 solves
+  LE global wall-clock time per iteration:              0.000 sec (0.3%)
+  LE global matrix maximum size:                           65
+  AMG cycles per iteration:                            11.620 cycles
+  Relaxation sweeps per iteration:                       3626 sweeps
+  Relaxation exchanges per iteration:                       0 exchanges
+  LE early protections (stall) per iteration:           0.000 times
+  LE early protections (divergence) per iteration:      0.000 times
+  Total SVARS touched:                                    380
+
+  Total wall-clock time:                               15.835 sec
+
+Transcript Stop Time:  21:47:30, 23 Dec 2024 Paris, Madrid 
+Total Transcript Time: 0 Minute 45 Second.
